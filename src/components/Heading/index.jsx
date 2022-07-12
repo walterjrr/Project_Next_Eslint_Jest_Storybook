@@ -1,15 +1,18 @@
 import P from 'prop-types';
 import * as Styled from './style';
 
-export const Heading = ({ children, light = false }) => {
+export const Heading = ({ children, colorDark = true, as = 'h1', size = 'big', uppercase = false }) => {
   return (
-    <Styled.Container light={light}>
+    <Styled.Title colorDark={colorDark} as={as} size={size} uppercase={uppercase}>
       <h1>{children}</h1>
-    </Styled.Container>
+    </Styled.Title>
   );
 };
 
 Heading.propTypes = {
   children: P.node.isRequired,
-  light: P.bool.isRequired,
+  colorDark: P.bool,
+  as: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  size: P.oneOf(['small', 'medium', 'big', 'huge']),
+  uppercase: P.bool,
 };
