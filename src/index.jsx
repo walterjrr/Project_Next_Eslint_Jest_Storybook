@@ -6,8 +6,7 @@ import { GlobalStyles } from './styles/global-styles';
 import { theme } from './styles/theme';
 import Home from './templates/App/Index';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Home />
