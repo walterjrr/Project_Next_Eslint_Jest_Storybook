@@ -1,4 +1,4 @@
-import { Menu } from './index';
+import { Menu } from '.';
 
 import linksMock from '../NavLinks/mock';
 
@@ -13,10 +13,8 @@ export default {
       srcImg: '',
     },
   },
-  argTypes: {
-    children: { type: 'string' },
-  },
 };
+
 export const Template = (args) => {
   return (
     <div style={{ height: '300vh', background: 'gray' }}>
