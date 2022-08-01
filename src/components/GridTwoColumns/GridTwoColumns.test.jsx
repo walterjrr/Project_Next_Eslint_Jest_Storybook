@@ -1,10 +1,10 @@
 import { renderTheme } from '../../styles/render-theme';
-import { Menu } from '.';
+import { GridTwoColumns } from '.';
 import { screen } from '@testing-library/react';
 
-describe('<Menu />', () => {
+describe('<GridTwoColumns />', () => {
   it('should render', () => {
-    renderTheme(<Menu>Children</Menu>);
+    renderTheme(<GridTwoColumns>Children</GridTwoColumns>);
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 });
